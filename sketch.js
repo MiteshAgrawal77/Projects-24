@@ -3,7 +3,7 @@ var line1body, line2body, line3body
 var page_options, paperBody
 
 const Engine = Matter.Engine;
-const myworld = Matter.World;
+const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
@@ -37,8 +37,8 @@ function setup() {
 
 	  paper=createSprite(20,660,40,40);
 
-	engine = Engine.create();
-	world = engine.world;
+	myengine = Engine.create();
+	myworld = myengine.world;
 
 	//Create the Bodies Here.
 
@@ -57,7 +57,7 @@ function setup() {
 	line3body = Bodies.rectangle(500,610,20,100,{isStatic:true})
 	World.add(myworld, line3body);
 
-	Engine.run(engine);
+	Engine.run(myengine);
   
 }
 
@@ -78,9 +78,9 @@ function draw() {
 
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
-		  
-		 Matter.Body.applyForce(paperBody.body,paperBody.body.position,{x:85, y:-85})
-		 // packageSprite.setVelocityY = +10;
+		  console.log("hi")
+		 Matter.Body.applyForce(paperBody,paperBody.position,{x:85, y:-85})
+		
 		  
 	   
 	 }
