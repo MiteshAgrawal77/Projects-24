@@ -86,3 +86,74 @@ function keyPressed() {
 	 }
 
 	}
+/*var paper, line1, line2, line3
+var line1body, line2body, line3body
+var page_options, paperBody
+
+const Engine = Matter.Engine;
+const World = Matter.World;
+const Bodies = Matter.Bodies;
+const Body = Matter.Body;
+
+function preload()
+{
+	
+}
+
+function setup() {
+	createCanvas(800, 500);
+	rectMode(CENTER);
+
+	
+
+	myengine = Engine.create();
+	myworld = myengine.world;
+
+	//Create the Bodies Here.
+
+	paperBody = Bodies.circle(20 , 400 ,20, {restitution:0.5,density:1});
+	World.add(myworld, paperBody);
+
+	ground = Bodies.rectangle(width/2, height-35, width, 10 , {isStatic:true});
+	 World.add(myworld, ground);
+
+	line1body = Bodies.rectangle(400,450,200,20,{isStatic:true})
+	World.add(myworld, line1body);
+
+	line2body = Bodies.rectangle(300,410,20,100,{isStatic:true})
+	World.add(myworld, line2body);
+
+	line3body = Bodies.rectangle(500,410,20,100,{isStatic:true})
+	World.add(myworld, line3body);
+
+	//Engine.run(myengine);
+  
+}
+
+
+function draw() {
+  
+  background(0);
+  Engine.update(myengine)
+   
+  
+
+  ellipseMode(RADIUS)
+  ellipse(paperBody.position.x,paperBody.position.y,20,20)
+  console.log(paperBody.position.x,paperBody.position.y)
+
+  rectMode(CENTER)
+  rect(ground.position.x,ground.position.y,width,10)
+
+ 
+}
+
+
+function keyPressed() {
+	if (keyCode === UP_ARROW) {
+		  console.log("hi")
+		 Matter.Body.applyForce(paperBody,paperBody.position,{x:20, y:-20})		 
+	 }
+
+	}
+*/
